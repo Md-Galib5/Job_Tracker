@@ -55,12 +55,12 @@ mainContainer.addEventListener('click', function(event) {
         const statusBtn = parentNode.querySelector('.toggle-btn');
 
         if (event.target.classList.contains('green-btn')) {
-            statusBtn.innerText = 'Interview';
+            statusBtn.innerText = 'INTERVIEW';
             updateStatusStyle(statusBtn, 'Interview');
         }
 
         if (event.target.classList.contains('red-btn')) {
-            statusBtn.innerText = 'Rejected';
+            statusBtn.innerText = 'REJECTED';
             updateStatusStyle(statusBtn, 'Rejected');
         }
     }
