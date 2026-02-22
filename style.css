@@ -3,7 +3,7 @@
   color: black;
 }
 
-/* .job-title{
+/* .jobTitle{
     color: red;
 } */
 
@@ -22,3 +22,18 @@
 /* .job-desk{
     color: red;
 } */
+/* 
+.red-btn{
+    color: purple;
+} */
+
+
+.interview-style {
+    color: #22c55e;          /* green text */
+    border-color: #22c55e;    /* green border */
+}
+
+.rejected-style {
+    color: #ef4444;           /* red text */
+    border-color: #ef4444;     /* red border */
+}
