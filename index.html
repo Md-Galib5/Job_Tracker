@@ -41,19 +41,32 @@
             <button onclick="toggleStyle('reject-btn')" id="reject-btn" class="px-7 py-1 bg-white">Rejected</button>
             </div>
             <div>
-                <p>0 <span>Job</span></p>
+                <p><span id="job-count">0</span> <span>Job</span></p>
             </div>
             </div>
         </div>
     </main>
 
+    <section id="no-job" 
+class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-center text-center items-center hidden">
+    
+    <img src="./jobs.png" alt="">
+    <h3 class="text-2xl my-4 text-[#002C5C] font-semibold">
+        No jobs available
+    </h3>
+    <p class="text-[#64748B]">
+        Check back soon for new job opportunities
+    </p>
+</section>
+
      <!-- filter card -->
-         <section id="filtered-section" class="hidden py-10"></section>
+         <!-- <section id="filtered-section" class="hidden py-10"></section>
         <section id="no-job" class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-center text-center items-center">
             <img src="./jobs.png" alt="">
             <h3 class="text-2xl my-4 text-[#002C5C] font-semibold">No jobs available</h3>
             <p class="text-[#64748B]">Check back soon for new job opportunities</p>
-        </section>
+        </section> -->
+       <section id="filtered-section" class="w-[80%] mx-auto space-y-4 hidden"></section>
 
     <section id="all-card" class="w-[80%] mx-auto mt-10 space-y-4">
         <div class="card bg-white px-6 py-4">
