@@ -10,10 +10,10 @@
 </head>
 
 <body class="bg-gray-100">
-    <header class="mt-6 w-[80%] mx-auto">
+    <header class="w-full max-w-6xl mx-auto px-4">
     <h1 class="font-bold text-3xl text-[#323B49]">Job Application Tracker</h1>
 
-    <div class="grid grid-cols-3 gap-8 mt-5">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5">
         <div class="bg-white text-black p-4 rounded-2xl">
             <p>Total</p>
             <p id="total">0</p>
@@ -31,7 +31,8 @@
     </div>
     <hr class="my-10">
     </header>
-    <main class="w-[80%] mx-auto">
+    <main class="w-full max-w-6xl mx-auto px-4"
+>
         <div>
         <h3 class="font-bold">Available Jobs</h3>
         <div class="flex justify-between items-center">
@@ -48,8 +49,8 @@
     </main>
 
     <section id="no-job" 
-class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-center text-center items-center hidden">
-    
+class="w-full max-w-6xl mx-auto px-4
+ my-8 bg-white rounded-lg p-10 flex flex-col justify-center text-center items-center hidden">
     <img src="./jobs.png" alt="">
     <h3 class="text-2xl my-4 text-[#002C5C] font-semibold">
         No jobs available
@@ -66,9 +67,9 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
             <h3 class="text-2xl my-4 text-[#002C5C] font-semibold">No jobs available</h3>
             <p class="text-[#64748B]">Check back soon for new job opportunities</p>
         </section> -->
-       <section id="filtered-section" class="w-[80%] mx-auto space-y-4 hidden"></section>
-
-    <section id="all-card" class="w-[80%] mx-auto mt-10 space-y-4">
+       <section id="filtered-section" class="w-full max-w-6xl mx-auto px-4
+ space-y-4 hidden"></section>
+    <section id="all-card" class="w-full max-w-6xl mx-auto px-4 mt-10 space-y-4">
         <div class="card bg-white px-6 py-4">
             <div class="flex justify-between">
                 <div>
@@ -78,7 +79,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">Remote  •   Full-time  •  $130,000 - $175,000</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
@@ -101,7 +102,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">Los Angeles, CA • Part-time•$80,000 - $120,000</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
@@ -124,7 +125,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">Boston, MA •Full-time•$125,000 - $165,000</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
@@ -147,7 +148,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">Seattle, WA • Full-time • $140,000 - $190,000</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button  class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
@@ -170,7 +171,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">Austin, TX • Full-time • $110,000 - $150,000</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button  class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
@@ -193,7 +194,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">New York, NY • Full-time • $130,000 - $170,00</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button  class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
@@ -216,7 +217,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">Remote • Full-time • $120,000 - $160,000</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button  class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
@@ -239,7 +240,7 @@ class="w-[80%] mx-auto my-8 bg-white rounded-lg p-10 flex flex-col justify-cente
                     <div class="mt-4 mb-4">
                         <p class="salary">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                     </div>
-                    <button class="toggle-btn border-2 border-green-500 px-4 py-1 font-semibold text-green-500 mb-2">Not Applied</button>
+                    <button  class="toggle-btn bg-gray-200 border-2 border-gray-300 px-4 py-1 font-semibold text-black mb-2">Not Applied</button>
                     <p class="job-desk text-[#64748B]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                 </div>
                 <div class="flex gap-3 mt-5">

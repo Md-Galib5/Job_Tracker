@@ -3,11 +3,11 @@
   color: black;
 }
 .interview-style {
-    color: #22c55e;          /* green text */
-    border-color: #22c55e;    /* green border */
+    color: #22c55e;
+    border-color: #22c55e;
 }
 
 .rejected-style {
-    color: #ef4444;           /* red text */
-    border-color: #ef4444;     /* red border */
+    color: #ef4444;        
+    border-color: #ef4444;   
 }

@@ -62,7 +62,7 @@ function toggleStyle(id) {
     if (id === 'all-btn') {
     allcard.classList.remove('hidden');
     filterSection.classList.add('hidden');
-    noJobSection.classList.add('hidden'); // ADD THIS
+    noJobSection.classList.add('hidden');
 }
 
     calculateCount();
@@ -79,8 +79,6 @@ function updateStatusStyle(statusBtn, status) {
         statusBtn.classList.add('rejected-style');
     }
 }
-
-// MAIN CARD HANDLER (add or move between lists)
 mainContainer.addEventListener('click', function (event) {
     if (event.target.classList.contains('green-btn') || event.target.classList.contains('red-btn')) {
 
@@ -105,7 +103,13 @@ mainContainer.addEventListener('click', function (event) {
             updateStatusStyle(statusBtn, 'Rejected');
         }
 
-        const cardInfo = { jobTitle, jobType, salary, jobDesk, status };
+        const cardInfo = {
+            jobTitle,
+            jobType,
+            salary,
+            jobDesk,
+            status
+        };
 
         if (status === 'INTERVIEW') {
             reject_list = reject_list.filter(item => item.jobTitle !== jobTitle);
@@ -137,17 +141,28 @@ mainContainer.addEventListener('click', function (event) {
 
         if (currentStatus === 'reject-btn') {
             renderReject();
-        }
+        }   
     }
-});
 
-// FILTER SECTION HANDLER (rendered cards)
+    if (event.target.classList.contains('fa-trash-can')) {
+    const parentNode = event.target.closest('.card');
+    const jobTitle = parentNode.querySelector('.jobTitle').innerText;
+
+    interview_list = interview_list.filter(item => item.jobTitle !== jobTitle);
+    reject_list = reject_list.filter(item => item.jobTitle !== jobTitle);
+
+    parentNode.remove();
+    calculateCount();
+
+    if (mainContainer.children.length === 0) {
+        noJobSection.classList.remove('hidden');
+    }
+}
+
+});
 filterSection.addEventListener('click', function (event) {
     const target = event.target;
 
-    
-
-    // INTERVIEW toggle
     if (target.classList.contains('green-btn')) {
         const parentNode = target.closest('.card');
         const jobTitle = parentNode.querySelector('.jobTitle').innerText;
@@ -182,11 +197,7 @@ if (currentStatus === 'interview-btn') {
 } else if (currentStatus === 'reject-btn') {
     renderReject();
 }
-
-
     }
-
-    // REJECT toggle (from interview section)
     if (target.classList.contains('red-btn')) {
         const parentNode = target.closest('.card');
         const jobTitle = parentNode.querySelector('.jobTitle').innerText;
@@ -203,32 +214,23 @@ if (currentStatus === 'interview-btn') {
             status: 'REJECTED'
         };
 
-        // REMOVE FROM INTERVIEW LIST
         interview_list = interview_list.filter(item => item.jobTitle !== jobTitle);
 
-        // ADD TO REJECT LIST
         const exists = reject_list.find(item => item.jobTitle === jobTitle);
         if (!exists) {
             reject_list.push(cardInfo);
         } else {
             exists.status = 'REJECTED';
         }
-
         calculateCount();
 
-        // ONLY RENDER REJECT TAB (not interview)
-        //renderReject();
-        //calculateCount();
-
-if (currentStatus === 'interview-btn') {
+  if (currentStatus === 'interview-btn') {
     renderInterview();
 } else if (currentStatus === 'reject-btn') {
     renderReject();
 }
 
     }
-
-    // DELETE FUNCTIONALITY
     if (target.classList.contains('fa-trash-can')) {
         const parentNode = target.closest('.card');
         const jobTitle = parentNode.querySelector('.jobTitle').innerText;
@@ -237,12 +239,14 @@ if (currentStatus === 'interview-btn') {
         reject_list = reject_list.filter(item => item.jobTitle !== jobTitle);
 
         parentNode.remove();
-
         calculateCount();
+
+         if(interview_list.length === 0 || reject_list.length === 0) {
+        noJobSection.classList.remove('hidden');
+        filterSection.classList.add('hidden');
+    }
     }
 });
-
-// RENDER INTERVIEW TAB
 function renderInterview() {
     filterSection.innerHTML = '';
      if (interview_list.length === 0) {
@@ -285,7 +289,6 @@ function renderInterview() {
     }
 }
 
-// RENDER REJECT TAB
 function renderReject() {
     filterSection.innerHTML = '';
     
