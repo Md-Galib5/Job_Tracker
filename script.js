@@ -240,9 +240,10 @@ if (currentStatus === 'interview-btn') {
 
         parentNode.remove();
         calculateCount();
-
-         if(interview_list.length === 0 || reject_list.length === 0) {
+        //why this isn't add in github
+        if(interview_list.length === 0 || reject_list.length === 0) {
         noJobSection.classList.remove('hidden');
+        
         filterSection.classList.add('hidden');
     }
     }
