@@ -138,12 +138,10 @@ mainContainer.addEventListener('click', function (event) {
         if (currentStatus === 'interview-btn') {
             renderInterview();
         }
-
         if (currentStatus === 'reject-btn') {
             renderReject();
         }   
     }
-
     if (event.target.classList.contains('fa-trash-can')) {
     const parentNode = event.target.closest('.card');
     const jobTitle = parentNode.querySelector('.jobTitle').innerText;
@@ -243,7 +241,7 @@ if (currentStatus === 'interview-btn') {
         //why this isn't add in github
         if(interview_list.length === 0 || reject_list.length === 0) {
         noJobSection.classList.remove('hidden');
-        
+
         filterSection.classList.add('hidden');
     }
     }
